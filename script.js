@@ -52,3 +52,14 @@ function renderStudentList(students) {
 // ];
 
 // renderStudentList(sampleStudents);
+
+
+const resetButton = document.querySelector('button[type="reset"]');
+
+resetButton.addEventListener('click', (event) => {
+    const confirmation = confirm('Are you sure you want to clear the form?');
+    if (!confirmation) {
+        // Prevent the reset if the user cancels
+        event.preventDefault();
+    }
+});
